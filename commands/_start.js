@@ -12,6 +12,15 @@
   aliases: 
 CMD*/
 
+is_bot_setupped = Bot.getProperty("is_bot_setupped");
+if(!is_bot_setupped){
+  Bot.sendMessage("Seems it is new bot. Please /setup it if you admin")
+  return
+}
+
+lang_code = request.from.language_code;
+Libs.Lang.user.setLang(lang_code);
+
 welcomeMsg = "🌍 WELCOME TO Bots.Business Invest" +
 "\n\n" +
 "✔️ The team of Bots.Business  works under Chat Bot Platform as Service - CBPaaS." +

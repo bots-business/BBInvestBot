@@ -13,4 +13,7 @@ joined = User.getProperty("joinedToChanell");
 // only user joined to chanell can access to /menu
 if(!joined){ return }
 
-Bot.sendKeyboard("Balance, Invest plans, ", "Main menu");
+var keyboard = "Balance, Invest plans,\n" + 
+   "💵 Deposit";
+
+Bot.sendKeyboard(keyboard, "Main menu");
