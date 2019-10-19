@@ -21,16 +21,7 @@ if(!is_bot_setupped){
 lang_code = request.from.language_code;
 Libs.Lang.user.setLang(lang_code);
 
-welcomeMsg = "🌍 WELCOME TO Bots.Business Invest" +
-"\n\n" +
-"✔️ The team of Bots.Business  works under Chat Bot Platform as Service - CBPaaS." +
-"Anybody can create chat bot." +
-"\n\n" +
-"📱 Bots.Business have mobile and web app." +
-"\n\n" +
-"|💰 You can invest in our team." +
-"\n\n" +
-"Link: https://bots.business"
+welcomeMsg = Libs.Lang.get().start.text;
 
 Bot.sendMessage(welcomeMsg);
 

@@ -21,7 +21,7 @@ function showWarning(message, isAlert){
 }
 
 function authorizeUser(){
-  showWarning("✔️ Thank you!", false);
+  showWarning(Libs.Lang.get().onCheckJoin.successMessage, false);
   Bot.editInlineKeyboard([]);
   User.setProperty("joinedToChanell", true, "boolean");
   Bot.runCommand("/menu");
@@ -44,5 +44,5 @@ var isJoined = (
 if(isJoined){
   authorizeUser();
 }else{
-  showWarning("Please go to chanell @BBInvest and join for continue.", true);
+  showWarning(Libs.Lang.get().onCheckJoin.notJoinMessage, true);
 }
