@@ -14,12 +14,6 @@ var on_result = "/on-check-joining"
 
 if(params=="as-task"){
   on_result = "/task-on-check-joining";
-  
-  // repeat checking periodically - 1 once at hour
-  Bot.run( {
-    command: "/check-joining as-task",
-    run_after: 1*60*60,  // 1 hour delay
-  })
 }
 
 Api.getChatMember({

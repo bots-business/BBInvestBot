@@ -22,4 +22,12 @@ var isJoined = (
 if(!isJoined){
   User.setProperty("joinedToChanell", false, "boolean");
   Bot.runCommand("/need-join");
+  return
 }
+
+// repeat checking periodically - 1 once at hour
+// user can leave chat anytime
+Bot.run( {
+  command: "/check-joining as-task",
+  run_after: 1*60*60,  // 1 hour delay
+})
