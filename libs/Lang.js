@@ -7,7 +7,7 @@ function setUserLanguage(curLangName){
 function getUserLanguage(){
   let lng = User.getProperty(LIB_PREFIX + 'curLangName');
   if(lng){
-    let json = Bot.getProperty(LIB_PREFIX + curLng);
+    let json = Bot.getProperty(LIB_PREFIX + lng);
     if(json){ return lng }
   }
   return getDefaultLanguage();
