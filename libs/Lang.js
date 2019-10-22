@@ -32,9 +32,10 @@ function get(lang){
   }
 
   let json = Bot.getProperty(LIB_PREFIX + curLng);
-  if(json){ return json }
-  
-  Bot.getProperty(LIB_PREFIX + getDefaultLanguage());
+  if(!json){
+    throw 'Language is not setup: ' + curLng;
+  }
+  return json
 }
 
 publish({
