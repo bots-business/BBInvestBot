@@ -28,9 +28,7 @@ function replaceInJson(json, value, to_value){
 }
 
 function setupLanguage(langName, keys){
-  var fixedKeys = replaceInJson(keys, "\\n", "⋱") // multilines fix
-
-  Bot.setProperty(LIB_PREFIX + langName, fixedKeys, 'json');
+  Bot.setProperty(LIB_PREFIX + langName, keys, 'json');
   let def = getDefaultLanguage();
   if(!def){ setDefaultLanguage(langName) }
 }
@@ -47,7 +45,7 @@ function get(lang){
     throw 'Language is not setup: ' + curLng;
   }
 
-  return replaceInJson(json, "⋱", "\\n") // multilines fix
+  return replaceInJson(json, ">n", "\n") // multilines fix
 }
 
 publish({
