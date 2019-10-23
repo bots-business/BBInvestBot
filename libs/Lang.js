@@ -45,7 +45,7 @@ function get(lang){
     throw 'Language is not setup: ' + curLng;
   }
 
-  return replaceInJson(json, ">n", "\n") // multilines fix
+  return replaceInJson(json, "=n", "\n") // multilines fix
 }
 
 publish({
