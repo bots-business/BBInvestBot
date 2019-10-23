@@ -71,3 +71,5 @@ enLang = {
 
 // first language is default language
 Libs.Lang.setup("en", enLang);
+
+Bot.sendMessage("Multi Languages - installed");
