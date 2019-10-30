@@ -25,9 +25,12 @@ if(!isJoined){
   return
 }
 
-// repeat checking periodically - 1 once at hour
+// repeat checking periodically - 1 once at hour by default
 // user can leave chat anytime
+
+run_after_time = Bot.getProperty('CONFIGS').CHANELL_JOINING_VALIDATION_TIME;
+
 Bot.run( {
   command: "/check-joining as-task",
-  run_after: 1*60*60,  // 1 hour delay
+  run_after: run_after_time
 })
