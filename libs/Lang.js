@@ -21,12 +21,6 @@ function getDefaultLanguage(){
   return Bot.getProperty(LIB_PREFIX + 'default');
 }
 
-function replaceInJson(json, value, to_value){
-  var text = JSON.stringify(json)
-  text = text.split(value).join(to_value);
-  return JSON.parse(text);
-}
-
 function setupLanguage(langName, keys){
   Bot.setProperty(LIB_PREFIX + langName, keys, 'json');
   let def = getDefaultLanguage();
@@ -45,7 +39,7 @@ function get(lang){
     throw 'Language is not setup: ' + curLng;
   }
 
-  return replaceInJson(json, "=n", "\n") // multilines fix
+  return json;
 }
 
 publish({
