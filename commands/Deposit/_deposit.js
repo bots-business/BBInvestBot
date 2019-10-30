@@ -16,7 +16,7 @@ function getButton(coin){
 buttons = [
  [ 
    getButton("BTC"),
-   getButton("LTC"),
+   getButton("LTC")
  ]
 ]
 
