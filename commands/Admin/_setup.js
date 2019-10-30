@@ -51,6 +51,4 @@ Bot.setProperty('CONFIGS', CONFIGS, "json");
 Bot.run({ command: "/setup-languages", options: CONFIGS });
 Bot.runCommand("/setup-git");
 
-Bot.setProperty("is_bot_setupped", true, "boolean");
-
-Bot.sendMessage("Setup complete");
+Bot.sendMessage("Now you need setup CoinPayments Keys: /setupcoinpayments");
