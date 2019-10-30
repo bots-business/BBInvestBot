@@ -44,7 +44,7 @@ if(user.id != CONFIGS.ADMIN_ID){
   Bot.sendMessage(
     "Access denied.\n\nYou can change `ADMIN_ID` in BJS\n" + 
     "for `/setup` command in configs sections" + 
-    "Your ID is `" + user.id + "`"
+    "\n\nYour ID is `" + user.id + "`"
   )
   return
 }
