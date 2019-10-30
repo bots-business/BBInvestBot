@@ -30,10 +30,11 @@ keys = message.split("\n");
 if(keys.length!=3){
   Bot.sendMessage(
     "Please input *each key on new line* in one message!" +
-    "\nExample:" +
+    "\n\n*Example:*" +
     "\nPrivate key" +
     "\nPublic key" +
-    "\nBB Api key"
+    "\nBB Api key" +
+    "\n\n try again /setupcoinpayments"
   );
   return
 }
