@@ -16,6 +16,8 @@ PROJECT_BENEFITS = "📱 Bots.Business have mobile and web app."
 
 if(completed_commands_count==0){ return }
 
+// you can set individual configs for each language
+// by default global configs used - see /setup command
 PROJECT_URL = options.PROJECT_URL
 CHANELL_NAME = options.CHANELL_NAME
 CHANELL_URL = options.CHANELL_URL
