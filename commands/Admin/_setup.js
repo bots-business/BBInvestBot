@@ -40,12 +40,9 @@ CONFIGS = {
 
 // ===== END configs ==================
 
-if(user.id != CONFIGS.ADMIN_ID){
-  Bot.sendMessage(
-    "Access denied.\n\nYou can change `ADMIN_ID` in BJS\n" + 
-    "for `/setup` command in configs sections" + 
-    "\n\nYour ID is `" + user.id + "`"
-  )
+var is_admin = Libs.Base.isAdmin(CONFIGS.ADMIN_ID); 
+if(!is_admin){
+  // setup can be runned by admin only
   return
 }
 
