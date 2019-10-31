@@ -21,7 +21,7 @@ function showWarning(message, isAlert){
 }
 
 function authorizeUser(){
-  showWarning(Libs.Lang.get().onCheckJoin.successMessage, false);
+  showWarning(LANG.onCheckJoin.successMessage, false);
   Bot.editInlineKeyboard([]);
   User.setProperty("joinedToChanell", true, "boolean");
   Bot.runCommand("/menu");
@@ -44,5 +44,5 @@ var isJoined = (
 if(isJoined){
   authorizeUser();
 }else{
-  showWarning(Libs.Lang.get().onCheckJoin.notJoinMessage, true);
+  showWarning(LANG.onCheckJoin.notJoinMessage, true);
 }

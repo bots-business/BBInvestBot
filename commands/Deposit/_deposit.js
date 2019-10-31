@@ -11,7 +11,7 @@ CMD*/
 
 wallets = User.getProperty("wallets", {});
 
-var trans = Libs.Lang.get().deposit;
+var trans = LANG.deposit;
 
 var text = trans.text;
 var button_text = trans.generateNewAddressButton

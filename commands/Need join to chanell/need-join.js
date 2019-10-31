@@ -10,12 +10,12 @@
 CMD*/
 
 Bot.sendInlineKeyboard(
-  [   { title: Libs.Lang.get().needJoin.buttons.goToChanell,
+  [   { title: LANG.needJoin.buttons.goToChanell,
         url: "https://t.me/bbinvest"
       },
-      { title: Libs.Lang.get().needJoin.buttons.checkJoin,
+      { title: LANG.needJoin.buttons.checkJoin,
         command: "check-joining"
       }
   ],
-  Libs.Lang.get().needJoin.text
+  LANG.needJoin.text
 );

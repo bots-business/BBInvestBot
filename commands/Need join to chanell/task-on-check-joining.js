@@ -30,5 +30,5 @@ if(!isJoined){
 
 Bot.run( {
   command: "/check-joining as-task",
-  run_after: Libs.Base.getConfigs().CHANELL_JOINING_VALIDATION_TIME
+  run_after: Base.getConfigs().CHANELL_JOINING_VALIDATION_TIME
 })

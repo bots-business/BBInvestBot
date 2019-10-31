@@ -13,7 +13,7 @@ function getButton(coin){
   return { title: coin, command: "new-deposit-address " + coin }
 }
 
-var coins = Libs.Base.getConfigs().coinPayments.acceptedCoins;
+var coins = Base.getConfigs().coinPayments.acceptedCoins;
 
 // Generate inline buttons
 buttons = []

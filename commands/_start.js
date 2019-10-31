@@ -21,7 +21,7 @@ if(!is_bot_setupped){
 lang_code = request.from.language_code;
 Libs.Lang.user.setLang(lang_code);
 
-welcomeMsg = Libs.Lang.get().start.text;
+welcomeMsg = LANG.start.text;
 
 Bot.sendMessage(welcomeMsg);
 

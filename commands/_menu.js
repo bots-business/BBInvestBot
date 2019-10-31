@@ -14,6 +14,6 @@ joined = User.getProperty("joinedToChanell");
 if(!joined){ return }
 
 Bot.sendKeyboard(
-  Libs.Lang.get().menu.buttons,
-  Libs.Lang.get().menu.text
+  LANG.menu.buttons,
+  LANG.menu.text
 );
