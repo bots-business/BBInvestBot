@@ -9,7 +9,16 @@
   aliases:
 CMD*/
 
-Bot.sendMessage(inspect(options));
-
+coin = params;
 let wallet = options.result.address;
-Bot.sendMessage("Your permanent wallet address is:\n`" + wallet + "`")
+
+Bot.sendMessage(
+  "Your permanent *" + coin + " wallet address is*:\n\n`"
+  + wallet + "`"
+)
+
+wallets = User.getProperty("wallets", {});
+
+wallets[coin] = wallet;
+
+User.setProperty("wallets", wallets, "json");

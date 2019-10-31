@@ -9,29 +9,26 @@
   aliases: 💵 deposit
 CMD*/
 
-function getButton(coin){
-   return { title: coin, command: "/new-deposit-address " + coin }
+wallets = User.getProperty("wallets", {});
+
+var trans = Libs.Lang.get().deposit;
+
+var text = trans.text;
+var button_text = trans.generateNewAddressButton
+
+wallets_info = ""
+
+for(coin in wallets){
+  wallets_info = wallets_info + coin + ": `" + wallets[coin] + "\n";
 }
 
-var coins = Libs.Base.getConfigs().coinPayments.acceptedCoins;
-
-// Generate inline buttons
-buttons = []
-line = []
-for(index in coins){
-  line.push( getButton(coins[index]) );
-
-  if(line.length > 4){
-    // 4 buttons per row
-    buttons.push(line);
-    line = []
-  }
+if(wallets_info!=""){
+  wallets_info = trans.yourWallets + wallets_info;
+}else{
+  wallets_info = trans.noWallets;
 }
-
-if(line[0]){ buttons.push(line); }
 
 Bot.sendInlineKeyboard(
-  buttons,
-  Libs.Lang.get().deposit.text
+  [[ { text: button_text, command: "new-wallet-buttons" } ]],
+  text + wallets_info
 )
-
