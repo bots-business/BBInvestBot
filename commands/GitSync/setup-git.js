@@ -1,5 +1,5 @@
 /*CMD
-  command: /setup-git
+  command: setup-git
   help: 
   need_reply: 
   auto_retry_time: 

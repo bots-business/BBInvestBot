@@ -1,5 +1,5 @@
 /*CMD
-  command: /new-deposit-address
+  command: new-deposit-address
   help: 
   need_reply: 
   auto_retry_time: 

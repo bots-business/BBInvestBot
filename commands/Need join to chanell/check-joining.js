@@ -1,5 +1,5 @@
 /*CMD
-  command: /check-joining
+  command: check-joining
   help: 
   need_reply: 
   auto_retry_time: 
@@ -10,10 +10,10 @@
 CMD*/
 
 var chanell = "@BBInvest"
-var on_result = "/on-check-joining" 
+var on_result = "on-check-joining" 
 
 if(params=="as-task"){
-  on_result = "/task-on-check-joining";
+  on_result = "task-on-check-joining";
 }
 
 Api.getChatMember({

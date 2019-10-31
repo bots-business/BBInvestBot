@@ -28,7 +28,7 @@ Bot.sendMessage(welcomeMsg);
 need_join = User.getProperty("joinedToChanell");
 if(!need_join){
   // if user not joined to chanell yet:
-  Bot.runCommand("/need-join");
+  Bot.runCommand("need-join");
 }else{
   // user was already join to chanell
   Bot.runCommand("/menu");

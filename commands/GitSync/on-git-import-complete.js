@@ -1,5 +1,5 @@
 /*CMD
-  command: /on-git-import-complete
+  command: on-git-import-complete
   help: 
   need_reply: 
   auto_retry_time: 

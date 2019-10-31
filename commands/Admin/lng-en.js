@@ -1,5 +1,5 @@
 /*CMD
-  command: /lng-en
+  command: lng-en
   help: 
   need_reply: 
   auto_retry_time: 

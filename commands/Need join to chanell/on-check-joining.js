@@ -1,5 +1,5 @@
 /*CMD
-  command: /on-check-joining
+  command: on-check-joining
   help: 
   need_reply: 
   auto_retry_time: 

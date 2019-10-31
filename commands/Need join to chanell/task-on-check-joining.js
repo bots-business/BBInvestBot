@@ -1,5 +1,5 @@
 /*CMD
-  command: /task-on-check-joining
+  command: task-on-check-joining
   help: 
   need_reply: 
   auto_retry_time: 
