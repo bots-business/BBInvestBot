@@ -56,7 +56,7 @@ var lang = {
       "\n\n" +
       "The transfer is *automatically* added to your deposit after *3 confirmations*." +
       "\n\n⚠️ Your transfer will be *converted to USD*",
-    yourWallets: "Your current wallets:\n",
+    yourWallets: "*Your current wallets*:\n",
     noWallets: "👇 Please generate new wallet now",
     generateNewAddressButton: "Generate new address"
   },
