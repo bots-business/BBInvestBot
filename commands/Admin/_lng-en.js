@@ -54,9 +54,9 @@ var lang = {
   deposit: {
     text: "💱 Send crypto coin to your generated address" +
       "\n\n" +
-      "The transfer is *automatically* added to your deposit after *3 confirmations*.\n\n" +
-      "\n\n⚠️ Your transfer will be *converted to USD*" + 
-      "\n\n👇 *Generate new address*: please select your coin"
+      "The transfer is *automatically* added to your deposit after *3 confirmations*." +
+      "\n\n⚠️ Your transfer will be *converted to USD*",
+    generateNewAddressButton: "Generate new address"
   },
   needJoin: {
     text: "Please join this chanell for starting\n" + CHANELL_NAME,
