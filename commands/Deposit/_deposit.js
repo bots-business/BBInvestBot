@@ -19,7 +19,7 @@ var button_text = trans.generateNewAddressButton
 wallets_info = ""
 
 for(coin in wallets){
-  wallets_info = wallets_info + coin + ": `" + wallets[coin] + "\n";
+  wallets_info = wallets_info + coin + ": `" + wallets[coin] + "`\n";
 }
 
 if(wallets_info!=""){
@@ -29,6 +29,6 @@ if(wallets_info!=""){
 }
 
 Bot.sendInlineKeyboard(
-  [[ { text: button_text, command: "new-wallet-buttons" } ]],
-  text + wallets_info
+  [[ { title: button_text, command: "new-wallet-buttons" } ]],
+  text + "\n\n" + wallets_info
 )
