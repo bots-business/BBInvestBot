@@ -29,7 +29,8 @@ if(!Libs.Base.isAdmin()){
 keys = message.split("\n");
 if(keys.length!=3){
   Bot.sendMessage(
-    "Please input *each key on new line* in one message!" +
+    "*Error!*" +
+    "\n\nPlease input *each key on new line* in one message!" +
     "\n\n*Example:*" +
     "\nPrivate key" +
     "\nPublic key" +
