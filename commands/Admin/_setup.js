@@ -35,7 +35,11 @@ CONFIGS = {
   CHANELL_JOINING_VALIDATION_TIME: 60*60,
   PROJECT_NAME : "Bots.Business Invest",
   PROJECT_SHORT_NAME : "Bots.Business",
-  LANGUAGES: languages
+  LANGUAGES: languages,
+  coinPayments:{
+    // accepted coins
+    acceptedCoins: ['BTC', 'LTC']
+  }
 }
 
 // ===== END configs ==================
