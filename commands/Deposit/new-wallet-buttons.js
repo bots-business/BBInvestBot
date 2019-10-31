@@ -6,7 +6,7 @@
   folder: Deposit
   answer: 
   keyboard: 
-  aliases: 💵 deposit
+  aliases:
 CMD*/
 
 function getButton(coin){
