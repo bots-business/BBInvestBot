@@ -44,14 +44,19 @@ if(keys.length!=3){
 // Do not share them
 
 // Get your keys in https://www.coinpayments.net/index.php?cmd=acct_api_keys
-Bot.sendMessage("Set CoinPayments Private Key: " + keys[0]);
+Bot.sendMessage("Set CoinPayments *Private Key:* " + keys[0]);
 Libs.CoinPayments.setPrivateKey(keys[0]);
 
-Bot.sendMessage("Set CoinPayments Public Key: " + keys[1]);
+Bot.sendMessage("Set CoinPayments *Public Key:* " + keys[1]);
 Libs.CoinPayments.setPublicKey(keys[1]);
 
 // Get your BB Api Key from Bots.Business App in Profile
-Bot.sendMessage("Set BB Api Key: " + keys[2]);
+Bot.sendMessage("Set *BB Api Key*: " + keys[2]);
 Libs.CoinPayments.setBBApiKey(keys[2]);
+
+Bot.sendMessage(
+  "⚠️ You need set IPN secret also." + 
+  "\nPlease see this [help](https://help.bots.business/libs/coinpayments#setup-set-ipn-secret)"
+)
 
 Bot.setProperty("is_bot_setupped", true, "boolean");
