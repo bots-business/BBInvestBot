@@ -79,8 +79,14 @@ var lang = {
   options: {
     text: "Please setup options here",
     inlineButtons: [
-      { title: "🌐 Language", command: "show-lang-buttons" }
-    ]
+      {
+        title: "🌐 Language",
+        command: "show-lang-buttons" // do not translate this
+      }
+    ],
+    language: {
+      successfullyChanged: "Changed to: "
+    }
   }
 
 }
