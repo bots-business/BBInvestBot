@@ -36,6 +36,5 @@ for(ind in commits){
 Api.sendMessage({
   text: info,
   chat_id: chat_for_news, // by default "@bbinvestnews"
-  parse_mode: "Markdown",
   disable_web_page_preview: true
 });
