@@ -16,3 +16,9 @@ Bot.importGit({
   branch: "master", // it is master branch
   success: "on-git-import-complete"
 })
+
+Bot.inspect(request);
+
+Bot.sendMessage("====");
+
+Bot.inspect(options);
