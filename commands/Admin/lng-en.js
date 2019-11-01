@@ -25,6 +25,8 @@ PROJECT_NAME = options.PROJECT_NAME
 PROJECT_SHORT_NAME = options.PROJECT_SHORT_NAME
 
 var lang = {
+  code: LANG_NAME,
+  
   global: {
     PROJECT_URL: PROJECT_URL,
     CHANELL_NAME: CHANELL_NAME,
@@ -35,6 +37,8 @@ var lang = {
     PROJECT_BENEFITS: PROJECT_BENEFITS
   },
 
+  flag: "🇺🇸",
+  
   start: {
     text: "🌍 WELCOME TO " + PROJECT_NAME +
       "\n\n" +
@@ -47,8 +51,9 @@ var lang = {
       "Link: " + PROJECT_URL
   },
   menu: {
-    buttons: "Balance, Invest plans,\n" + 
-      "💵 Deposit",
+    buttons: "Balance, Invest plans," + 
+      "\n💵 Deposit," +
+      "\n⚙ Options",
     text: "Main menu"
   },
   deposit: {
@@ -70,6 +75,12 @@ var lang = {
   onCheckJoin: {
     successMessage: "✔️ Thank you!",
     notJoinMessage: "Please go to chanell " + CHANELL_NAME + " and join for continue."
+  },
+  options: {
+    text: "Please setup options here",
+    inlineButons: [
+      { title: "🌐 Language", command: "show-lang-buttons" }
+    ]
   }
 
 }
