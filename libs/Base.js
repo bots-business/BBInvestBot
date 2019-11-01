@@ -44,8 +44,28 @@ function getInlineButtons(items, build_btn_callback){
   return buttons
 }
 
+function showWarning(message, isAlert){
+  Api.answerCallbackQuery({
+    callback_query_id: request.id,
+    text: message,
+    show_alert: isAlert // or false - for alert on top
+  })
+}
+
+function showTopNotify(message){
+  // show top notify after inline button pressing
+  showWarning(message, false)
+}
+
+function showAlert(message){
+  // show alert after inline button pressing
+  showWarning(message, true)
+}
+
 publish({
   isAdmin: isAdmin,
   getConfigs: getConfigs,
-  getInlineButtons: getInlineButtons
+  getInlineButtons: getInlineButtons,
+  showTopNotify: showTopNotify,
+  showAlert: showAlert
 })

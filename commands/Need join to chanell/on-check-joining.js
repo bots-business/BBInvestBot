@@ -12,16 +12,9 @@
   aliases: 
 CMD*/
 
-function showWarning(message, isAlert){
-  Api.answerCallbackQuery({
-    callback_query_id: request.id,
-    text: message,
-    show_alert: isAlert // or false - for alert on top
-  })
-}
-
 function authorizeUser(){
-  showWarning(LANG.onCheckJoin.successMessage, false);
+  Base.showTopNotify(LANG.onCheckJoin.successMessage);
+
   Bot.editInlineKeyboard([]);
   User.setProperty("joinedToChanell", true, "boolean");
   Bot.runCommand("/menu");
@@ -44,5 +37,5 @@ var isJoined = (
 if(isJoined){
   authorizeUser();
 }else{
-  showWarning(LANG.onCheckJoin.notJoinMessage, true);
+  Base.showAlert(LANG.onCheckJoin.notJoinMessage);
 }
