@@ -41,7 +41,9 @@ CONFIGS = {
     acceptedCoins: ['BTC', 'LTC']
   },
   // define buttons count in one row for Inline Keyboards
-  INLINE_BUTTONS_COUNT_IN_ONE_ROW: 4
+  INLINE_BUTTONS_COUNT_IN_ONE_ROW: 4,
+  // news about git commits on git webhook
+  CHAT_FOR_NEWS_ABOUT_GIT_WEBHOOK: "@bbinvestnews"
 }
 
 // ===== END configs ==================
