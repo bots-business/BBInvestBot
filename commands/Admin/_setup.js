@@ -24,24 +24,24 @@ var languages = ['en'];
 CONFIGS = {
   // change for yours admin id it is user.id
   ADMIN_ID: 1860,
-  PROJECT_URL : "https://bots.business",
-  CHANELL_NAME : "@BBInvest",
-  CHANELL_URL : "https://t.me/bbinvest",
+  PROJECT_URL: "https://bots.business",
+  CHANELL_NAME: "@BBInvest",
+  CHANELL_URL: "https://t.me/bbinvest",
   // user must join to it on /start
   // repeat checking periodically
   // by default once at 1 hour
   // checking spent 1 iteration per user at hour by default
   // time in seconds
   CHANELL_JOINING_VALIDATION_TIME: 60*60,
-  PROJECT_NAME : "Bots.Business Invest",
-  PROJECT_SHORT_NAME : "Bots.Business",
+  PROJECT_NAME: "Bots.Business Invest",
+  PROJECT_SHORT_NAME: "Bots.Business",
   LANGUAGES: languages,
-  coinPayments:{
+  coinPayments: {
     // accepted coins
     acceptedCoins: ['BTC', 'LTC']
   },
   // define buttons count in one row for Inline Keyboards
-  INLINE_BUTTONS_COUNT_IN_ONE_ROW = 4
+  INLINE_BUTTONS_COUNT_IN_ONE_ROW: 4
 }
 
 // ===== END configs ==================
