@@ -38,7 +38,7 @@ var lang = {
   },
 
   flag: "🇺🇸",
-  
+
   start: {
     text: "🌍 WELCOME TO " + PROJECT_NAME +
       "\n\n" +
@@ -78,7 +78,7 @@ var lang = {
   },
   options: {
     text: "Please setup options here",
-    inlineButons: [
+    inlineButtons: [
       { title: "🌐 Language", command: "show-lang-buttons" }
     ]
   }

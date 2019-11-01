@@ -9,8 +9,6 @@
   aliases: ⚙ Options
 CMD*/
 
-
-
 Bot.sendInlineKeyboard(
   LANG.options.inlineButtons,
   LANG.options.text
