@@ -21,7 +21,7 @@ function authorizeUser(){
 
   Bot.run( {
     command: "/check-joining as-task",
-    run_after: 1*60*60,  // 1 hour delay
+    run_after: Base.getConfigs().CHANELL_JOINING_VALIDATION_TIME,  // 1 hour delay by default
   })
 }
 
