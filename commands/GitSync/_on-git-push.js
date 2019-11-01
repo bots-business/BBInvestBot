@@ -17,7 +17,7 @@ Bot.importGit({
   success: "on-git-import-complete"
 })
 
-var chat_for_news = Base.getConfigs.CHAT_FOR_NEWS_ABOUT_GIT_WEBHOOK
+var chat_for_news = Base.getConfigs().CHAT_FOR_NEWS_ABOUT_GIT_WEBHOOK
 if(!chat_for_news){
   // no news about commits if no chat
   return
@@ -30,11 +30,15 @@ var webhook_info = JSON.parse(content);
 var commits = webhook_info.commits;
 for(ind in commits){
   commit = commits[ind];
-  info = info + "➕ " + commit.message + " [view](" + commit.url + ")\n"
+  info = info + "➕ " +
+    // fix for possible markup issue
+    commit.message.split("*").join("").split("_").join( ).split("`").join("'") +
+    " [view](" + commit.url + ")\n"
 }
 
 Api.sendMessage({
   text: info,
   chat_id: chat_for_news, // by default "@bbinvestnews"
-  disable_web_page_preview: true
+  disable_web_page_preview: true,
+  parse_mode: "Markdown"
 });
