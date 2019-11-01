@@ -15,7 +15,7 @@ function getButton(coin){
 
 var coins = Base.getConfigs().coinPayments.acceptedCoins;
 
-Base.getInlineButtons(coins, getButton)
+buttons = Base.getInlineButtons(coins, getButton)
 
 Bot.editInlineKeyboard(
   buttons

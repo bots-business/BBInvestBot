@@ -14,10 +14,10 @@ function getButton(lang){
 }
 
 var langs = Base.getConfigs().LANGUAGES;
-Base.getInlineButtons(langs, getButton);
+buttons = Base.getInlineButtons(langs, getButton);
 
 Bot.editInlineKeyboard(
-  langs
+  buttons
 )
 
 
