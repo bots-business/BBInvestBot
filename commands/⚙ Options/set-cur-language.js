@@ -13,7 +13,7 @@ var lng_code = params;
 
 Libs.Lang.user.setLang(lng_code);
 
-Base.showTopNotify(LANG.options.language.successfullyChanged);
+Base.showTopNotify(LANG.options.language.successfullyChanged + lng_code);
 
 // Go to back in keyboard to Options
 Bot.editInlineKeyboard(
