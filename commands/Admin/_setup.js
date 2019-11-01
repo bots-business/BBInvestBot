@@ -39,7 +39,9 @@ CONFIGS = {
   coinPayments:{
     // accepted coins
     acceptedCoins: ['BTC', 'LTC']
-  }
+  },
+  // define buttons count in one row for Inline Keyboards
+  INLINE_BUTTONS_COUNT_IN_ONE_ROW = 4
 }
 
 // ===== END configs ==================

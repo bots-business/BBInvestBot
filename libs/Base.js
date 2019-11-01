@@ -21,7 +21,27 @@ function isAdmin(admin_id){
   return false;
 }
 
+function getInlineButtons(buttons, build_btn_callback){
+  // Generate inline buttons
+  row_buttons_count = getConfigs().INLINE_BUTTONS_COUNT_IN_ONE_ROW
+  buttons = []
+  line = []
+  for(index in buttons){
+    line.push( build_btn_callback(buttons[index]) );
+
+    if(line.length > row_buttons_count){
+      // 4 buttons per row
+      buttons.push(line);
+      line = []
+    }
+  }
+
+  if(line[0]){ buttons.push(line); }
+  return buttons
+}
+
 publish({
   isAdmin: isAdmin,
-  getConfigs: getConfigs
+  getConfigs: getConfigs,
+  getInlineButtons: getInlineButtons
 })

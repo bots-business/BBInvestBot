@@ -15,20 +15,7 @@ function getButton(coin){
 
 var coins = Base.getConfigs().coinPayments.acceptedCoins;
 
-// Generate inline buttons
-buttons = []
-line = []
-for(index in coins){
-  line.push( getButton(coins[index]) );
-
-  if(line.length > 4){
-    // 4 buttons per row
-    buttons.push(line);
-    line = []
-  }
-}
-
-if(line[0]){ buttons.push(line); }
+Base.getInlineButtons(coins, getButton)
 
 Bot.editInlineKeyboard(
   buttons
