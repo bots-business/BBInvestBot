@@ -9,13 +9,15 @@
   aliases: 
 CMD*/
 
-var is_admin = Libs.Base.isAdmin(CONFIGS.ADMIN_ID); 
+let ADMIN_ID = 1860;
+
+var is_admin = Libs.Base.isAdmin(ADMIN_ID); 
 if(!is_admin){
   // setup can be runned by admin only
   return
 }
 
-Bot.run("/configs")
+Bot.run({ command: "/configs", options:{ admin_id: ADMIN_ID } })
 
 Bot.runCommand("setup-git");
 

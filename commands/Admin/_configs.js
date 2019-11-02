@@ -9,7 +9,9 @@
   aliases: 
 CMD*/
 
-var is_admin = Base.isAdmin(CONFIGS.ADMIN_ID); 
+var ADMIN_ID = options.admin_id;
+
+var is_admin = Base.isAdmin(ADMIN_ID); 
 if(!is_admin){
   // setup can be runned by admin only
   return
@@ -29,7 +31,7 @@ var languages = ['en'];
 // Change it
 CONFIGS = {
   // change for yours admin id it is user.id
-  ADMIN_ID: 1860,
+  ADMIN_ID: ADMIN,
   PROJECT_URL: "https://bots.business",
   CHANELL_NAME: "@BBInvest",
   CHANELL_URL: "https://t.me/bbinvest",
