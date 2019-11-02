@@ -10,4 +10,5 @@
 CMD*/
 
 var coin = params;
+Bot.sendMessage("IPN:")
 Bot.sendMessage(inspect(options));
