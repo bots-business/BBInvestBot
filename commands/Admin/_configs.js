@@ -46,7 +46,7 @@ CONFIGS = {
   LANGUAGES: languages,
   coinPayments: {
     // accepted coins
-    acceptedCoins: ['BTC', 'LTC']
+    acceptedCoins: ['BTC', 'LTC', 'WAVES']
   },
   // define buttons count in one row for Inline Keyboards
   INLINE_BUTTONS_COUNT_IN_ONE_ROW: 4,
