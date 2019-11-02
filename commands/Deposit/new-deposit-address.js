@@ -15,8 +15,8 @@ Libs.CoinPayments.createPermanentWallet({
   currency: coin,
   label: "user" + user.id,
   onSuccess: "on-user-wallet-create " + coin,
-  onIncome: "on-user-wallet-income " + coin
-  
+  onIncome: "on-user-wallet-income " + coin,
+  onIPN: "on-ipn " + coin
   // if you want customize error messages
   // onError: "/onError"
 });
