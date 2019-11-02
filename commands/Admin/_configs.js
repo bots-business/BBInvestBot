@@ -31,7 +31,7 @@ var languages = ['en'];
 // Change it
 CONFIGS = {
   // change for yours admin id it is user.id
-  ADMIN_ID: ADMIN,
+  ADMIN_ID: ADMIN_ID,
   PROJECT_URL: "https://bots.business",
   CHANELL_NAME: "@BBInvest",
   CHANELL_URL: "https://t.me/bbinvest",
