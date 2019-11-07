@@ -20,29 +20,28 @@ var panel = {
 
   fields: [
     {
+      name: "PROJECT_NAME",
+      title: "Name",
+      description: "for example: My Invest Bot",
+      type: "string",
+      icon: "document"
+    },
+
+    {
+      name: "PROJECT_SHORT_NAME",
+      title: "Short name",
+      description: "for example: mIB",
+      type: "string",
+      icon: "bookmark"
+    },
+
+    {
       name: "PROJECT_URL",
       title: "Project url",
       description: "for example: http://my-project.com",
       type: "string",
-      icon: "bulb"
-    },
-
-    {
-      name: "CHANELL_NAME",
-      title: "Chanell name",
-      description: "for example: @mychanell. User must join to it on bots starting",
-      type: "string",
-      icon: "bulb"
-    },
-
-    {
-      name: "CHANELL_URL",
-      title: "Chanell url",
-      description: "for example: https://t.me/mychanell. User must join to it on bots starting",
-      type: "string",
-      icon: "bulb"
-    },
-
+      icon: "link"
+    }
   ]
 }
 
@@ -60,7 +59,7 @@ var panel = {
       title: "Chanell name",
       description: "for example: @mychanell. User must join to it on bots starting",
       type: "string",
-      icon: "bulb"
+      icon: "chatboxes"
     },
 
     {
@@ -68,12 +67,28 @@ var panel = {
       title: "Chanell url",
       description: "for example: https://t.me/mychanell. User must join to it on bots starting",
       type: "string",
-      icon: "bulb"
-    },
-
+      icon: "link"
+    }
   ]
 }
 
-AdminPanel.setPanel("Chanell", panel);
+var panel = {
+  title: "Git Sync options",
+  description: "Make development easy with Git Sync. See https://help.bots.business/git/automatic-importing-on-git-push",
+  button_title: "Save Git options",
+
+  fields: [
+    {
+      name: "CHAT_FOR_NEWS_ABOUT_GIT_WEBHOOK",
+      title: "Chat name for posting Git news",
+      description: "for example: @mychanell. Bot send commits info on sync to this chanell",
+      type: "string",
+      icon: "chatboxes"
+    },
+  ]
+}
+
+AdminPanel.setPanel("gitSync", panel);
+
 
 Bot.sendMessage("Admin Panels - installed");
