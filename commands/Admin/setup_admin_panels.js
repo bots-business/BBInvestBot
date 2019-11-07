@@ -11,7 +11,7 @@ CMD*/
 
 // can be runned only from /setup
 if(!options){ return }
-if(!option.setup){ return }
+if(!options.setup){ return }
 
 var panel = {
   title: "General information",
