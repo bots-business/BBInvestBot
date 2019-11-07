@@ -17,6 +17,11 @@ if(!is_admin){
   return
 }
 
+Bot.run({
+  command: "setup_admin_panels",
+  options: { setup: true }
+});
+
 Bot.run({ command: "/configs", options:{ admin_id: ADMIN_ID } })
 
 Bot.runCommand("setup-git");
