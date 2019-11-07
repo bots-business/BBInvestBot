@@ -17,6 +17,7 @@ var panel = {
   title: "General information",
   description: "Common bot data.",
   button_title: "Save information",
+  index: 0,
 
   fields: [
     {
@@ -44,14 +45,16 @@ var panel = {
     }
   ]
 }
-
 AdminPanel.setPanel("GeneralInformation", panel);
+
+
 
 
 var panel = {
   title: "Bot chanell setting",
   description: "Information about bot chanell.",
   button_title: "Save chanell settings",
+  index: 1,
 
   fields: [
     {
@@ -71,13 +74,15 @@ var panel = {
     }
   ]
 }
-
 AdminPanel.setPanel("Chanell", panel);
+
+
 
 var panel = {
   title: "Git Sync options",
   description: "Make development easy with Git Sync. See https://help.bots.business/git/automatic-importing-on-git-push",
   button_title: "Save Git options",
+  index: 2,
 
   fields: [
     {
@@ -89,7 +94,6 @@ var panel = {
     },
   ]
 }
-
 AdminPanel.setPanel("gitSync", panel);
 
 
