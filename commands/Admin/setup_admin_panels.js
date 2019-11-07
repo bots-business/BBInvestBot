@@ -72,6 +72,8 @@ var panel = {
   ]
 }
 
+AdminPanel.setPanel("Chanell", panel);
+
 var panel = {
   title: "Git Sync options",
   description: "Make development easy with Git Sync. See https://help.bots.business/git/automatic-importing-on-git-push",
