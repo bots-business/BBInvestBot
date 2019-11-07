@@ -1,5 +1,5 @@
 /*CMD
-  command: /setup_admin_panels
+  command: setup_admin_panels
   help: 
   need_reply: 
   auto_retry_time: 
@@ -75,3 +75,5 @@ var panel = {
 }
 
 AdminPanel.setPanel("Chanell", panel);
+
+Bot.sendMessage("Admin Panels - installed");
