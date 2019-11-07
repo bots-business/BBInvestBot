@@ -18,6 +18,7 @@ var panel = {
   description: "Common bot data.",
   button_title: "Save information",
   index: 0,
+  icon: "information",
 
   fields: [
     {
@@ -55,6 +56,7 @@ var panel = {
   description: "Information about bot chanell.",
   button_title: "Save chanell settings",
   index: 1,
+  icon: "chatbubbles",
 
   fields: [
     {
@@ -83,6 +85,7 @@ var panel = {
   description: "Make development easy with Git Sync. See https://help.bots.business/git/automatic-importing-on-git-push",
   button_title: "Save Git options",
   index: 2,
+  icon: "github",
 
   fields: [
     {
