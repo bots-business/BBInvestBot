@@ -23,9 +23,10 @@ var panel = {
   fields: [
     {
       name: "ADMIN_ID",
-      title: "Name",
+      title: "Admin ID",
       description: "you can get your admin_id with BJS Bot.sendMessage(user.id)",
       type: "string",
+      placeholder: "your admin id"
     }
   ]
 }
