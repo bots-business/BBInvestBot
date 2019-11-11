@@ -22,6 +22,13 @@ function haveAdminPanels(){
   return AdminPanel.getPanel("AdminInfo")
 }
 
+function getConfigValue(panel_name, field_name){
+  return AdminPanel.getPanelValue({
+    panel: panel_name,
+    name: field_name
+  })
+}
+
 function getInlineButtons(items, build_btn_callback){
   // Generate inline buttons
   row_buttons_count = getConfigs().INLINE_BUTTONS_COUNT_IN_ONE_ROW;
@@ -65,6 +72,8 @@ function showAlert(message){
 
 publish({
   isAdmin: isAdmin,
+  haveAdminPanels: haveAdminPanels,
+  getConfigValue: getConfigValue,
   getInlineButtons: getInlineButtons,
   showTopNotify: showTopNotify,
   showAlert: showAlert
