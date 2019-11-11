@@ -17,7 +17,7 @@ Bot.importGit({
   success: "on-git-import-complete"
 })
 
-var chat_for_news = Base.getConfigs().CHAT_FOR_NEWS_ABOUT_GIT_WEBHOOK
+var chat_for_news = Base.getConfigValue("GitSync", "CHAT_FOR_NEWS_ABOUT_GIT_WEBHOOK");
 if(!chat_for_news){
   // no news about commits if no chat
   return
