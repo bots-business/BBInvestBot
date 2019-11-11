@@ -117,7 +117,7 @@ var panel = {
     },
   ]
 }
-AdminPanel.setPanel("gitSync", panel);
+AdminPanel.setPanel("GitSync", panel);
 
 
 Bot.sendMessage("Admin Panels - installed");
