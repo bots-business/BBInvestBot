@@ -4,7 +4,7 @@ function isAdmin(){
     name: "ADMIN_ID"
   })
 
-  var admin_id_note = "You need set correct ADMIN_ID in Admin Panel." +
+  var admin_id_note = "You need set correct ADMIN ID in Admin Panel." +
     "\n\nYour ID is `" + user.id + "`"
   
   if(!admin_id){
