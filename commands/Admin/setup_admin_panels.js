@@ -48,7 +48,6 @@ var panel = {
       type: "string",
       icon: "document"
     },
-
     {
       name: "PROJECT_SHORT_NAME",
       title: "Short name",
@@ -56,13 +55,13 @@ var panel = {
       type: "string",
       icon: "bookmark"
     },
-
     {
       name: "PROJECT_URL",
       title: "Project url",
       description: "for example: http://my-project.com",
       type: "string",
-      icon: "link"
+      icon: "link",
+      placeholder: "http://my-project.com"
     }
   ]
 }
@@ -86,13 +85,20 @@ var panel = {
       type: "string",
       icon: "chatboxes"
     },
-
     {
       name: "CHANELL_URL",
       title: "Chanell url",
       description: "for example: https://t.me/mychanell. User must join to it on bots starting",
       type: "string",
       icon: "link"
+    },
+    {
+      name: "CHANELL_JOINING_VALIDATION_TIME",
+      title: "Joining validation time in seconds",
+      description: "Repeat checking periodically. Checking spent 1 iteration.",
+      value: 60*60,
+      icon: "time",
+      placeholder: "time in seconds"
     }
   ]
 }
