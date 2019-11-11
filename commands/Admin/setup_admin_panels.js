@@ -100,10 +100,30 @@ AdminPanel.setPanel("Chanell", panel);
 
 
 var panel = {
+  title: "CoinPayments.net setting",
+  description: "Setting for CoinPayments. You can recieve and transfer payments.",
+  button_title: "Save",
+  index: 3,
+  icon: "bitcoin",
+
+  fields: [
+    {
+      name: "ACCEPTED_COINS",
+      title: "Accepted coins",
+      description: "Coins with commas. For example: btc, ltc, eth",
+      type: "string",
+      icon: "bitcoin"
+    }
+  ]
+}
+AdminPanel.setPanel("CPOptions", panel);
+
+
+var panel = {
   title: "Languages",
   description: "Multi languages settings",
   button_title: "Save",
-  index: 5,
+  index: 4,
   icon: "flag",
   on_saving: {
     command: "/setup-languages"
@@ -127,7 +147,7 @@ var panel = {
   title: "Git Sync options",
   description: "Make development easy with Git Sync. See https://help.bots.business/git/automatic-importing-on-git-push",
   button_title: "Save Git options",
-  index: 3,
+  index: 5,
   icon: "cloud-download",
 
   fields: [
@@ -147,7 +167,7 @@ var panel = {
   title: "Advanced options",
   description: "Advanced bot options",
   button_title: "Save options",
-  index: 5,
+  index: 6,
   icon: "construct",
 
   fields: [
