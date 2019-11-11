@@ -99,13 +99,36 @@ var panel = {
 AdminPanel.setPanel("Chanell", panel);
 
 
+var panel = {
+  title: "Languages",
+  description: "Multi languages settings",
+  button_title: "Save",
+  index: 5,
+  icon: "flag",
+  on_saving: {
+    command: "/setup-languages"
+  },
+
+  fields: [
+    {
+      name: "LANGUAGES",
+      title: "Languages with commas. For example en, fr, it",
+      description: "You need languages file",
+      type: "string",
+      value: "en",
+      icon: "filing"
+    },
+  ]
+}
+AdminPanel.setPanel("LanguagesOptions", panel);
+
 
 var panel = {
   title: "Git Sync options",
   description: "Make development easy with Git Sync. See https://help.bots.business/git/automatic-importing-on-git-push",
   button_title: "Save Git options",
   index: 3,
-  icon: "github",
+  icon: "cloud-download",
 
   fields: [
     {
@@ -118,6 +141,28 @@ var panel = {
   ]
 }
 AdminPanel.setPanel("GitSync", panel);
+
+
+var panel = {
+  title: "Advanced options",
+  description: "Advanced bot options",
+  button_title: "Save options",
+  index: 5,
+  icon: "construct",
+
+  fields: [
+    {
+      name: "INLINE_BUTTONS_COUNT_IN_ONE_ROW",
+      title: "Inline buttons count in one row. 2 - 6",
+      description: "Use this option to set row buttons count for inline keyboard",
+      type: "integer",
+      value: 4,
+      icon: "keypad"
+    },
+  ]
+}
+AdminPanel.setPanel("AdvancedOptions", panel);
+
 
 
 Bot.sendMessage("Admin Panels - installed");
