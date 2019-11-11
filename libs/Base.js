@@ -65,7 +65,6 @@ function showAlert(message){
 
 publish({
   isAdmin: isAdmin,
-  getConfigs: getConfigs,
   getInlineButtons: getInlineButtons,
   showTopNotify: showTopNotify,
   showAlert: showAlert
