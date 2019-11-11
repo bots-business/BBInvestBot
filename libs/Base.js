@@ -52,12 +52,15 @@ function getInlineButtons(items, build_btn_callback){
   return buttons
 }
 
+function toArray(str){
+  if(!str){ return [] }
+  str = str.split(" ").join("")  // remove space
+  return str.split(",")
+}
+
 function getLanguages(){
   var lngs = getConfigValue("LanguagesOptions", "LANGUAGES");
-  
-  if(!lngs){ return [] }
-  lngs = lngs.split(" ").join("")  // remove space
-  return lngs.split(",")
+  return toArray(lngs);
 }
 
 function showWarning(message, isAlert){
@@ -85,5 +88,6 @@ publish({
   getInlineButtons: getInlineButtons,
   showTopNotify: showTopNotify,
   showAlert: showAlert,
-  getLanguages: getLanguages
+  getLanguages: getLanguages,
+  toArray: toArray
 })
