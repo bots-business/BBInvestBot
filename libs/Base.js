@@ -29,13 +29,9 @@ function getConfigValue(panel_name, field_name){
   })
 }
 
-function getConfigs(){
-  throw new Error("getConfigs is deprecated");
-}
-
 function getInlineButtons(items, build_btn_callback){
   // Generate inline buttons
-  row_buttons_count = getConfigs().INLINE_BUTTONS_COUNT_IN_ONE_ROW;
+  row_buttons_count = getConfigValue("AdvancedOptions", "INLINE_BUTTONS_COUNT_IN_ONE_ROW");
   buttons = []
   line = []
   
@@ -54,6 +50,14 @@ function getInlineButtons(items, build_btn_callback){
 
   if(line[0]){ buttons.push(line); }
   return buttons
+}
+
+function getLanguages(){
+  var lngs = getConfigValue("LanguagesOptions", "LANGUAGES");
+  
+  if(!lngs){ return [] }
+  lngs = lngs.split(" ").join("")  // remove space
+  return lngs.split(",")
 }
 
 function showWarning(message, isAlert){
@@ -81,5 +85,5 @@ publish({
   getInlineButtons: getInlineButtons,
   showTopNotify: showTopNotify,
   showAlert: showAlert,
-  getConfigs: getConfigs
+  getLanguages: getLanguages
 })

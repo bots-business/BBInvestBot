@@ -9,9 +9,11 @@
   aliases: 
 CMD*/
 
-var CONFIGS = options
+// can runned only by admin or from Admin Panel
+var can_run = ( Base.isAdmin() || !user )
+if(!can_run){ return }
 
-var languages = CONFIGS.LANGUAGES;
+var languages = Base.getLanguages();
 
 for(var i in languages){
   cmdName = "lng-" + languages[i];
