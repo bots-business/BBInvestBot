@@ -29,6 +29,10 @@ function getConfigValue(panel_name, field_name){
   })
 }
 
+function getConfigs(){
+  throw new Error("getConfigs is deprecated");
+}
+
 function getInlineButtons(items, build_btn_callback){
   // Generate inline buttons
   row_buttons_count = getConfigs().INLINE_BUTTONS_COUNT_IN_ONE_ROW;
@@ -76,5 +80,6 @@ publish({
   getConfigValue: getConfigValue,
   getInlineButtons: getInlineButtons,
   showTopNotify: showTopNotify,
-  showAlert: showAlert
+  showAlert: showAlert,
+  getConfigs: getConfigs
 })
