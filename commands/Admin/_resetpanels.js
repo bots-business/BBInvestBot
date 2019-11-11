@@ -10,6 +10,13 @@
 CMD*/
 
 // hard reset admin panels
+function setupAdminPanels(){
+  Bot.run({
+    command: "setup_admin_panels",
+    options: { setup: true }
+  });
+}
+
 if(Base.isAdmin()){
   setupAdminPanels();
 }
