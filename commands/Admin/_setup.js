@@ -16,8 +16,7 @@ function setupAdminPanels(){
   });
 }
 
-var is_admin = Base.isAdmin(); 
-if(!is_admin){
+if(!Base.isAdmin()){
   // setup can be runned by admin only
   // but need install Admin Panels if not exist
   if(!Base.haveAdminPanels()){
