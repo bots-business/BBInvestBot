@@ -13,7 +13,7 @@ function getButton(lang){
   return { title: lang, command: "set-cur-language " + lang }
 }
 
-var langs = Base.getConfigs().LANGUAGES;
+var langs = Base.getLanguages();
 buttons = Base.getInlineButtons(langs, getButton);
 
 Bot.editInlineKeyboard(

@@ -13,7 +13,9 @@ function getButton(coin){
   return { title: coin, command: "new-deposit-address " + coin }
 }
 
-var coins = Base.getConfigs().coinPayments.acceptedCoins;
+var coins = Base.toArray(
+  Base.getConfigValue("CPOptions", "ACCEPTED_COINS")
+)
 
 buttons = Base.getInlineButtons(coins, getButton)
 

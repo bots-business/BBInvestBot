@@ -28,7 +28,12 @@ if(!isJoined){
 // repeat checking periodically - 1 once at hour by default
 // user can leave chat anytime
 
+var run_after = Base.getConfigValue(
+  "Chanell",
+  "CHANELL_JOINING_VALIDATION_TIME"
+);
+
 Bot.run( {
   command: "/check-joining as-task",
-  run_after: Base.getConfigs().CHANELL_JOINING_VALIDATION_TIME
+  run_after: run_after
 })
