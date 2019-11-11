@@ -9,20 +9,24 @@
   aliases: 
 CMD*/
 
-let ADMIN_ID = 1860;
+function setupAdminPanels(){
+  Bot.run({
+    command: "setup_admin_panels",
+    options: { setup: true }
+  });
+}
 
-var is_admin = Libs.Base.isAdmin(ADMIN_ID); 
+var is_admin = Base.isAdmin(); 
 if(!is_admin){
   // setup can be runned by admin only
+  // but need install Admin Panels if not exist
+  if(!Base.haveAdminPanels()){
+    setupAdminPanels();
+  }
   return
 }
 
-Bot.run({
-  command: "setup_admin_panels",
-  options: { setup: true }
-});
-
-Bot.run({ command: "/configs", options:{ admin_id: ADMIN_ID } })
+// Bot.run({ command: "/configs", options:{ admin_id: ADMIN_ID } })
 
 Bot.runCommand("setup-git");
 
