@@ -1,7 +1,7 @@
 /*CMD
   command: /setupcoinpayments
   help:
-  need_reply: true
+  need_reply:
   auto_retry_time:
   folder: Admin
   <<ANSWER
@@ -21,22 +21,8 @@ BB Api key
   aliases:
 CMD*/
 
-if(!Libs.Base.isAdmin()){
-  // setup can be runned by admin only
-  return
-}
-
-keys = message.split("\n");
-if(keys.length!=3){
-  Bot.sendMessage(
-    "*Error!*" +
-    "\n\nPlease input *each key on new line* in one message!" +
-    "\n\n*Example:*" +
-    "\nPrivate key" +
-    "\nPublic key" +
-    "\nBB Api key" +
-    "\n\n try again /setupcoinpayments"
-  );
+if(user){
+  // setup can be runned by on saving panel only
   return
 }
 
@@ -44,19 +30,18 @@ if(keys.length!=3){
 // Do not share them
 
 // Get your keys in https://www.coinpayments.net/index.php?cmd=acct_api_keys
-Bot.sendMessage("Set CoinPayments *Private Key:* " + keys[0]);
-Libs.CoinPayments.setPrivateKey(keys[0]);
 
-Bot.sendMessage("Set CoinPayments *Public Key:* " + keys[1]);
-Libs.CoinPayments.setPublicKey(keys[1]);
+var private_key = getConfigValue("CPOptions", "PRIVATE_KEY")
+var public_key = getConfigValue("CPOptions", "PUBLIC_KEY")
+var bb_key = getConfigValue("CPOptions", "BB_KEY")
 
-// Get your BB Api Key from Bots.Business App in Profile
-Bot.sendMessage("Set *BB Api Key*: " + keys[2]);
-Libs.CoinPayments.setBBApiKey(keys[2]);
+Libs.CoinPayments.setPrivateKey(private_key);
+Libs.CoinPayments.setPublicKey(public_key);
+Libs.CoinPayments.setBBApiKey(bb_key);
+
+Bot.sendMessage("CoinPayments keys - installed")
 
 Bot.sendMessage(
   "⚠️ You need set IPN secret also." + 
   "\nPlease see this [help](https://help.bots.business/libs/coinpayments#setup-set-ipn-secret)"
 )
-
-Bot.setProperty("is_bot_setupped", true, "boolean");
