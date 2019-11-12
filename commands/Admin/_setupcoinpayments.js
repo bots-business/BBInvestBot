@@ -31,9 +31,9 @@ if(user){
 
 // Get your keys in https://www.coinpayments.net/index.php?cmd=acct_api_keys
 
-var private_key = getConfigValue("CPOptions", "PRIVATE_KEY")
-var public_key = getConfigValue("CPOptions", "PUBLIC_KEY")
-var bb_key = getConfigValue("CPOptions", "BB_KEY")
+var private_key = Base.getConfigValue("CPOptions", "PRIVATE_KEY")
+var public_key = Base.getConfigValue("CPOptions", "PUBLIC_KEY")
+var bb_key = Base.getConfigValue("CPOptions", "BB_KEY")
 
 Libs.CoinPayments.setPrivateKey(private_key);
 Libs.CoinPayments.setPublicKey(public_key);
