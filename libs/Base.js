@@ -16,7 +16,7 @@ function isAdmin(){
     return
   }
 
-  if(user.id == admin_id){ return true }
+  if(user.telegramid == admin_id){ return true }
 
   Bot.sendMessage("Access denied.\n\n" + admin_id_note)
   return false;
