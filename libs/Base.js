@@ -1,11 +1,15 @@
-function isAdmin(){
-  admin_id = AdminPanel.getPanelValue({
+function getAdminTgId(){
+  return AdminPanel.getPanelValue({
     panel: "AdminInfo",
-    name: "ADMIN_ID"
+    name: "ADMIN_TG_ID"
   })
+}
 
-  var admin_id_note = "You need set correct ADMIN ID in Admin Panel." +
-    "\n\nYour ID is `" + user.id + "`"
+function isAdmin(){
+  admin_id = getAdminTgId();
+
+  var admin_id_note = "You need set correct ADMIN TG ID in Admin Panel." +
+    "\n\nYour ID is `" + user.telegramid + "`"
   
   if(!admin_id){
     Bot.sendMessage(admin_id_note)
@@ -82,6 +86,7 @@ function showAlert(message){
 }
 
 publish({
+  getAdminTgId: getAdminTgId,
   isAdmin: isAdmin,
   haveAdminPanels: haveAdminPanels,
   getConfigValue: getConfigValue,
