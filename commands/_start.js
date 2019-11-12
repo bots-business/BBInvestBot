@@ -12,7 +12,7 @@
   aliases: 
 CMD*/
 
-is_bot_setupped = Bot.getProperty("is_bot_setupped");
+is_bot_setupped = Base.haveAdminPanels()
 if(!is_bot_setupped){
   Bot.sendMessage("Seems it is new bot. Please /setup it if you admin")
   return
