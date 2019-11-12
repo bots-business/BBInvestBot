@@ -110,15 +110,45 @@ var panel = {
   description: "Setting for CoinPayments. You can recieve and transfer payments.",
   button_title: "Save",
   index: 3,
-  icon: "bitcoin",
-
+  icon: "card",
+  on_saving:{
+    command: "/setupcoinpayments"
+  },
   fields: [
     {
       name: "ACCEPTED_COINS",
       title: "Accepted coins",
       description: "Coins with commas. For example: btc, ltc, eth",
       type: "string",
-      icon: "bitcoin"
+      icon: "wallet",
+      value: "BTC, LTC, WAVES"
+    },
+    {
+      name: "PRIVATE_KEY",
+      title: "Private key",
+      description: "Please get this secure key in CoinPayments panel",
+      type: "password",
+      icon: "lock",
+    },
+    {
+      name: "PUBLIC_KEY",
+      title: "Public key",
+      description: "Please get this secure key in CoinPayments panel",
+      type: "password",
+      icon: "key",
+    },
+    {
+      name: "BB_KEY",
+      title: "BB Api key",
+      description: "Please get this secure key in Profile",
+      type: "password",
+      icon: "key",
+    },
+    {
+      name: "info",
+      title: "⚠️ You need set IPN secret also.",
+      description: "Please see this https://help.bots.business/libs/coinpayments#setup-set-ipn-secret",
+      icon: "alert"
     }
   ]
 }
