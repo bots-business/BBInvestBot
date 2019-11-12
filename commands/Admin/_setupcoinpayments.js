@@ -38,3 +38,10 @@ var bb_key = getConfigValue("CPOptions", "BB_KEY")
 Libs.CoinPayments.setPrivateKey(private_key);
 Libs.CoinPayments.setPublicKey(public_key);
 Libs.CoinPayments.setBBApiKey(bb_key);
+
+Bot.sendMessageToChatWithId(
+  Base.getAdminTgId(),
+  "CoinPayments keys - installed" +
+  "\n\n⚠️ You need set IPN secret also." + 
+  "\nPlease see this [help](https://help.bots.business/libs/coinpayments#setup-set-ipn-secret)"
+)
