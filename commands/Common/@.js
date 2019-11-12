@@ -9,6 +9,8 @@
   aliases: 
 CMD*/
 
-LANG = Libs.Lang.get();
+if(user){
+  LANG = Libs.Lang.get();
+}
 
 Base = Libs.Base;
