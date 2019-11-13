@@ -25,10 +25,8 @@ if(!Base.isAdmin()){
   return
 }
 
-// Bot.run({ command: "/configs", options:{ admin_id: ADMIN_ID } })
-
 setupAdminPanels();
 
-Bot.runCommand("setup-git");
+Bot.run({ command: "/setup-languages" });
 
-Bot.sendMessage("Now you need setup CoinPayments Keys: /setupcoinpayments");
+Bot.runCommand("setup-git");
