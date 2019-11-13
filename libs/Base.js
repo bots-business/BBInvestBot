@@ -1,7 +1,7 @@
 function getAdminTgId(){
-  return AdminPanel.getPanelValue({
-    panel: "AdminInfo",
-    name: "ADMIN_TG_ID"
+  return AdminPanel.getFieldValue({
+    panel_name: "AdminInfo",
+    field_name: "ADMIN_TG_ID"
   })
 }
 
@@ -27,9 +27,9 @@ function haveAdminPanels(){
 }
 
 function getConfigValue(panel_name, field_name){
-  return AdminPanel.getPanelValue({
-    panel: panel_name,
-    name: field_name
+  return AdminPanel.getFieldValue({
+    panel_name: panel_name,
+    field_name: field_name
   })
 }
 

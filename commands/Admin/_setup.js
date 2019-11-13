@@ -27,9 +27,7 @@ if(!Base.isAdmin()){
 
 // Bot.run({ command: "/configs", options:{ admin_id: ADMIN_ID } })
 
-if(!Base.haveAdminPanels()){
-  setupAdminPanels();
-}
+setupAdminPanels();
 
 Bot.runCommand("setup-git");
 

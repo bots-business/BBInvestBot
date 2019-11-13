@@ -13,6 +13,12 @@ CMD*/
 if(!options){ return }
 if(!options.setup){ return }
 
+function setPanel(panel_name, data){
+  AdminPanel.setPanel({
+    panel_name: panel_name,
+    data: data
+  });
+}
 
 var panel = {
   title: "Admin Information",
@@ -30,7 +36,7 @@ var panel = {
     }
   ]
 }
-AdminPanel.setPanel("AdminInfo", panel);
+setPanel("AdminInfo", panel);
 
 
 var panel = {
@@ -65,7 +71,7 @@ var panel = {
     }
   ]
 }
-AdminPanel.setPanel("GeneralInformation", panel);
+setPanel("GeneralInformation", panel);
 
 
 
@@ -102,7 +108,7 @@ var panel = {
     }
   ]
 }
-AdminPanel.setPanel("Chanell", panel);
+setPanel("Chanell", panel);
 
 
 var panel = {
@@ -152,7 +158,7 @@ var panel = {
     }
   ]
 }
-AdminPanel.setPanel("CPOptions", panel);
+setPanel("CPOptions", panel);
 
 
 var panel = {
@@ -176,7 +182,7 @@ var panel = {
     },
   ]
 }
-AdminPanel.setPanel("LanguagesOptions", panel);
+setPanel("LanguagesOptions", panel);
 
 
 var panel = {
@@ -196,7 +202,7 @@ var panel = {
     },
   ]
 }
-AdminPanel.setPanel("GitSync", panel);
+setPanel("GitSync", panel);
 
 
 var panel = {
@@ -217,7 +223,7 @@ var panel = {
     },
   ]
 }
-AdminPanel.setPanel("AdvancedOptions", panel);
+setPanel("AdvancedOptions", panel);
 
 
 
