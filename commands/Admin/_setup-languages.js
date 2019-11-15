@@ -24,4 +24,4 @@ for(var i in languages){
   Bot.run({ command: cmdName, options: cfg })
 }
 
-Bot.sendMessage("Multi Languages - installed");
+Base.sendMessageToAdmin("Multi Languages - installed");

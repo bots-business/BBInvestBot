@@ -85,6 +85,13 @@ function showAlert(message){
   showWarning(message, true)
 }
 
+function sendMessageToAdmin(msg){
+  Bot.sendMessageToChatWithId(
+    Base.getAdminTgId(),
+    msg
+  )
+}
+
 publish({
   getAdminTgId: getAdminTgId,
   isAdmin: isAdmin,
@@ -94,5 +101,6 @@ publish({
   showTopNotify: showTopNotify,
   showAlert: showAlert,
   getLanguages: getLanguages,
-  toArray: toArray
+  toArray: toArray,
+  sendMessageToAdmin: sendMessageToAdmin
 })
