@@ -6,6 +6,7 @@ function getAdminTgId(){
 }
 
 function isAdmin(){
+  if(!user){ return false }
   admin_id = getAdminTgId();
 
   var admin_id_note = "You need set correct ADMIN TG ID in Admin Panel." +
