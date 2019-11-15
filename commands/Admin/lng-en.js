@@ -42,7 +42,7 @@ var lang = {
   start: {
     text: "🌍 WELCOME TO " + PROJECT_NAME +
       "\n\n" +
-      "✔️ The team of " + PROJECT_SHORT_NAME + PROJECT_DESCRIPTION +
+      "✔️ The team of " + PROJECT_SHORT_NAME + " " + PROJECT_DESCRIPTION +
       "\n\n" +
       PROJECT_BENEFITS +
       "\n\n" +
