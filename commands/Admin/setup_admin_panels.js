@@ -45,6 +45,10 @@ var panel = {
   button_title: "Save information",
   index: 1,
   icon: "information",
+  // need resetup languages because theys use this info 
+  on_saving:{
+    command: "/setup-languages"
+  },
 
   fields: [
     {
